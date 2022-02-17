@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+
+<div class="container pt-100 mb-5 mt-3">
+    <div class="row">
+        <div class="col-3">
+            <app-cart-summary></app-cart-summary>
+           <div class="list-group" >
+               <a href="#" (change)="changeCategory()"   class="list-group-item list-group-item-action" >  Tüm Kategoriler</a>
+               <a href="#" #deger *ngFor="let item of category"
+                 (click)="changeCategory(item)" 
+                 class="list-group-item list-group-item-action" 
+                 [class.active] = "item ==selectCategory"
+                 
+                 > {{item.name}}</a>
+            
+            </div>
+        </div>
+        <div class="col-9">
+            <div clss="row">
+                <div class="alert alert-warning"> 
+                    {{products.length}} tane ürün bulundu
+                </div>
+                <div *ngFor="let item of products" >
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <img src="../../assets/img/{{item.imageUrl}}">
+                            <div class="card-body">
+                                <h4 class="cart-title">
+                                    <a href="#">
+                                        {{item.name}}
+                                    </a>
+                                </h4>
+                                <small class="text-muted">
+                                   
+                                    <i class="fa-solid fa-turkish-lira-sign">{{item.price}}</i>
+                                </small>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button class="btn btn-outline-primary btn-sm">Details</button>
+                                <button  (click)="addProductToCart(item)" class="btn btn-outline-primary btn-sm ml-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="btn-group" *ngFor="let item of pageNumbers">
+                       <button (click)="changePage(item)" class="btn btn-outline-primary">
+                           {{item}}
+                       </button>
+                   
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
