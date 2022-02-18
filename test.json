@@ -1,52 +1,79 @@
 {
-    "product": [
-      {
-        "id": 1,
-        "name": "Smsung S1",
-        "price": 1000,
-        "imageUrl": "1.jpeg",
-         "description" :"Başarılı",
-         "categriID" :1
+  "product": [
+    {
+      "id": 1,
+      "name": "Smsung S1",
+      "price": 1000,
+      "imageUrl": "1.jpeg",
+      "description": "Başarılı",
+      "categriID": 1
     },
     {
-        "id": 2,
-        "name": "Smsung S2",
-        "price": 2000,
-        "imageUrl": "2.jpeg",
-         "description" :"Başarılı",
-         "categriID" :1
+      "id": 2,
+      "name": "Smsung S2",
+      "price": 2000,
+      "imageUrl": "2.jpeg",
+      "description": "Başarılı",
+      "categriID": 1
     },
     {
-        "id": 3,
-        "name": "Smsung S3",
-        "price": 3000,
-        "imageUrl": "3.jpeg",
-         "description" :"Başarılı",
-         "categriID" :2
+      "id": 3,
+      "name": "Smsung S3",
+      "price": 3000,
+      "imageUrl": "3.jpeg",
+      "description": "Başarılı",
+      "categriID": 2
     },
     {
-        "id": 4,
-        "name": "Smsung S4",
-        "price": 4000,
-        "imageUrl": "4.jpeg",
-         "description" :"Başarılı",
-         "categriID" :2
+      "id": 4,
+      "name": "Smsung S4",
+      "price": 4000,
+      "imageUrl": "4.jpeg",
+      "description": "Başarılı",
+      "categriID": 2
     },
     {
-        "id": 5,
-        "name": "Smsung S5",
-        "price": 5000,
-        "imageUrl": "5.jpeg",
-         "description" :"Başarılı",
-         "categriID" :3
+      "id": 5,
+      "name": "Smsung S5",
+      "price": 5000,
+      "imageUrl": "5.jpeg",
+      "description": "Başarılı",
+      "categriID": 3
     }
-    ],
-    "categories" :[
-        {"id" : 1, "name" : "Telefon"}, 
-        {"id" : 2, "name" : "Bilgisayar"}, 
-        {"id" : 3, "name" : "Elektronik"}
-        
-    ],
-    "orders" : []
-
-  }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Telefon"
+    },
+    {
+      "id": 2,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 3,
+      "name": "Elektronik"
+    }
+  ],
+  "orders": [
+    {
+      "cart": {
+        "items": [],
+        "itemCount": 0,
+        "total": 0
+      },
+      "isSent": false,
+      "name": "uıu",
+      "address": "uıoıu",
+      "city": "uıouıou",
+      "email": "ygıuyıu",
+      "id": 1
+    }
+  ],
+  "login" : [
+    {
+      "username" : "admin",
+      "password": 123
+    }
+  ]
+}

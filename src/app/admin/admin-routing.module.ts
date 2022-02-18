@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin.component';
+
 import { AuthComponent } from './auth/auth.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
-  {path : '/auth', component : AuthComponent},
-  {path : '/main', component : AdminComponent},
-  {path : '*', redirectTo : 'auth'}
+   { path: 'auth', component: AuthComponent },
+   { path : 'main', component : MainComponent},
+   { path: '**', redirectTo: 'auth' }
+ 
 ];
 
 @NgModule({

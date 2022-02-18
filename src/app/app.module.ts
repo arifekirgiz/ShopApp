@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ShopModule } from './shop/shop.module';
 import { RouterModule } from '@angular/router';
 import { ShopComponent } from './shop/shop.components';
@@ -17,20 +16,20 @@ import { CheckoutComponent } from './shop/checkout/checkout.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
     ShopModule,
     RouterModule.forRoot([
      { path :'shop', component:ShopComponent } ,
      { path :'cart', component:CartDetailComponent } ,
      { path :'checkout', component:CheckoutComponent } ,
-     { path :'*', redirectTo : "/shop" } 
+     
+     { path: 'admin', loadChildren:() => import('./admin/admin.module').then(mod=>mod.AdminModule)},
+     { path :'**', redirectTo : "/shop" } 
 
     ])
   
   
   ],
   providers: [],
-  bootstrap: [AppComponent,ShopModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
